@@ -1,0 +1,24 @@
+{
+  "name": "node-http",
+  "version": "1.0.0",
+  "description": "Http Node mode example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/womxnbuild/node-http.git"
+  },
+  "keywords": [
+    "node",
+    "http"
+  ],
+  "author": "womxnbuild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/womxnbuild/node-http/issues"
+  },
+  "homepage": "https://github.com/womxnbuild/node-http#readme"
+}
