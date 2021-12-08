@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
 
     if (req.method === 'GET'){
         var fileUrl;
-        if (fileUrl === '/') fileUrl = '/index.html';
+        if (req.url === '/') fileUrl = '/index.html';
         else fileUrl =  req.url;
 
         var filePath = path.resolve("./public"+fileUrl);
@@ -33,20 +33,13 @@ const server = http.createServer((req, res) => {
             res.setHeader('Content-Type', 'text/html');
             res.end("<html><head><title>404 Not Found</title></head>" +
                 "<body> File not an HTML file</body></html>");
-            return;
         }
     } else {
         res.statusCode = 404
         res.setHeader('Content-Type', 'text/html');
         res.end("<html><head><title>404 Not Found</title></head>" +
             "<body> Request Method Not Found</body></html>");
-        return;
     }
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end("<html><head><title>node-http</title></head><body>"
-    + "<h1> Hello world!</h1></body></html>");
-    return;
 });
 
 server.listen(port, hostname, () => {
